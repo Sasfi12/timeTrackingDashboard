@@ -1,1 +1,1 @@
-# Simple website that takes values from a json file to values. 
+# Simple website that takes values from a json file. 
