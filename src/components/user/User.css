@@ -1,0 +1,21 @@
+.user-card {
+    background-color: hsl(235, 46%, 20%);
+    .user-info {
+        background-color: hsl(246, 80%, 60%);
+        padding: 10px;
+        * {
+            margin: 0; 
+        }
+    }
+    .choices {
+        > p {
+            cursor: pointer;
+        }
+    }
+}
+.user{
+    width: 100px  !important;
+    height:100px !important ;
+    border: solid white 1px;
+    border-radius: 50px;
+}

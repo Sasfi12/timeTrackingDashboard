@@ -55,9 +55,11 @@ function App() {
   return (
     <>
       <div className='container'>
-              <User daily={setDaily} weekly={setWeekly} monthly={setMonthly} />
+              <User daily={setDaily} 
+                    weekly={setWeekly} 
+                    monthly={setMonthly} />
               <div className='cards-container'>
-                {MapTimeFrames }
+                {MapTimeFrames}
               </div>
       </div>
     </>
