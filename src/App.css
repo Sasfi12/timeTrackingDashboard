@@ -1,19 +1,8 @@
-
-.work {
-    background-color: hsl(15 , 100% , 70%);
-}
-.play    {
-    background-color: hsl(195 , 74% , 62%);
-}
-.study {
-    background-color: hsl(348 , 100% , 68%);
-}
-.exercise {
-    background-color: hsl(145 , 58% , 55%);
-}
-.social {
-    background-color: hsl(264 , 58% , 52%);
-}
-.self-care {
-    background-color: hsl(43 , 84% , 65%);
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    #root {
+        
+    }
 }

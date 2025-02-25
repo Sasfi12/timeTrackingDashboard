@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import User from './components/user/User'
 import Timeframe from './components/timeframe/Timeframe'
-import data from "../public/data.json"
+import data from "../public/data/data.json"
 import social from "./assets/images/icon-social.svg"
 import exercise from "./assets/images/icon-exercise.svg"
 import play from "./assets/images/icon-play.svg"
