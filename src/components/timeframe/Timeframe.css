@@ -85,3 +85,13 @@
         color: hsl(236, 100%, 87%)
     }
 }
+
+
+@media (max-width: 500px) {
+    .timeframe {
+        height: 175px !important;
+    .timeframe-text-container {
+        gap: 2px
+    }
+    }
+}
