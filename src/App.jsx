@@ -12,58 +12,33 @@ import work from "./assets/images/icon-work.svg"
 
 
 function App() {
-  const [currentlySelected , setCurrentlySelected] = useState("monthly") ;
-  const images = [work, play , study , exercise , social , selfCare]
-  const bgColors = ["work" , "play" , "study", "exercise" , "social" , "self-care"]
-  const MapTimeFrames = (
-      data.map(function(e , index) {
-        if(currentlySelected == "monthly")
-          return (
-            <Timeframe 
-              key={index} 
-              title={e.title} 
-              current= {e.timeframes.monthly.current} 
-              previous= {`Month - ${e.timeframes.monthly.previous}`} 
-              image= {images[index]}
-              bgColor= {bgColors[index]}
-              />
-            )
-        else if(currentlySelected == "daily")
-          return (
-            <Timeframe 
-              key={index} 
-              title={e.title} 
-              current= {e.timeframes.daily.current} 
-              previous= {`Day - ${e.timeframes.daily.previous}`} 
-              image= {images[index]}
-              bgColor= {bgColors[index]}    
-              />
-            )
-        else if(currentlySelected == "weekly")
-          return (
-            <Timeframe 
-              key={index} 
-              title={e.title} 
-              current= {e.timeframes.weekly.current} 
-              previous= {`Week - ${e.timeframes.weekly.previous}`} 
-              image= {images[index]}
-              bgColor= {bgColors[index]}
-              />
-            )
-      })
-    )
-  const setDaily = () => setCurrentlySelected("daily") ; 
-  const setWeekly = () => setCurrentlySelected("weekly") ; 
-  const setMonthly = () => setCurrentlySelected("monthly") ;
+  const [currentlySelected, setCurrentlySelected] = useState("monthly");
+  const images = [work, play, study, exercise, social, selfCare]
+  const bgColors = ["work", "play", "study", "exercise", "social", "self-care"]
+  const setDaily = () => setCurrentlySelected("daily");
+  const setWeekly = () => setCurrentlySelected("weekly");
+  const setMonthly = () => setCurrentlySelected("monthly");
   return (
     <>
       <div className='container'>
-              <User daily={setDaily} 
-                    weekly={setWeekly} 
-                    monthly={setMonthly} />
-              <div className='cards-container'>
-                {MapTimeFrames}
-              </div>
+        <User daily={setDaily}
+          weekly={setWeekly}
+          monthly={setMonthly} />
+        <div className='cards-container'>
+          { data.map(function (e, index) {
+          return (
+            <Timeframe
+              key={index}
+              title={e.title}
+              current={e.timeframes[currentlySelected].current}
+              previous={`Day - ${e.timeframes[currentlySelected].previous}`}
+              image={images[index]}
+              bgColor={bgColors[index]}
+            />
+          )
+    }
+    )}
+        </div>
       </div>
     </>
   )
