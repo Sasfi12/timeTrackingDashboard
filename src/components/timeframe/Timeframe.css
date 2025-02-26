@@ -28,6 +28,9 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    * {
+        margin: 0; 
+    }
 }
 
 
@@ -36,9 +39,14 @@
     transition: 0.2s;
     border-radius: inherit;
     z-index: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     &:hover {
         background-color: hsl(245, 55%, 30%);
     }
+   
 }
 
 .timeframe-title {
@@ -46,7 +54,7 @@
     justify-content: space-between;
     align-items: center;
     img {
-        height: 10px;
+        height: 5px;
     }
 }
 
@@ -62,5 +70,17 @@
         z-index: -1;
         right: 15px;
         top: -4px;
+    }
+}
+.timeframe-previous-current {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .timeframe-current {
+        font-size: 3em ;
+    }
+    .timeframe-previous {
+        font-size: 15px;
+        color: hsl(236, 100%, 87%)
     }
 }

@@ -1,14 +1,19 @@
 .user-card {
     background-color: hsl(235, 46%, 20%);
+    width: 250px;
+    height: 450px;
+    border-radius: 12px;
     .user-info {
         background-color: hsl(246, 80%, 60%);
         padding: 10px;
+        height: 70%;
+        border-radius: inherit;
         * {
             margin: 0; 
         }
     }
     .choices {
-        > p {
+        p {
             cursor: pointer;
         }
     }

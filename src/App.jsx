@@ -23,9 +23,10 @@ function App() {
               key={index} 
               title={e.title} 
               current= {e.timeframes.monthly.current} 
-              previous= {e.timeframes.monthly.previous} 
+              previous= {`Month - ${e.timeframes.monthly.previous}`} 
               image= {images[index]}
-              bgColor= {bgColors[index]}/>
+              bgColor= {bgColors[index]}
+              />
             )
         else if(currentlySelected == "daily")
           return (
@@ -33,9 +34,10 @@ function App() {
               key={index} 
               title={e.title} 
               current= {e.timeframes.daily.current} 
-              previous= {e.timeframes.daily.previous} 
+              previous= {`Day - ${e.timeframes.daily.previous}`} 
               image= {images[index]}
-              bgColor= {bgColors[index]}/>
+              bgColor= {bgColors[index]}    
+              />
             )
         else if(currentlySelected == "weekly")
           return (
@@ -43,9 +45,10 @@ function App() {
               key={index} 
               title={e.title} 
               current= {e.timeframes.weekly.current} 
-              previous= {e.timeframes.weekly.previous} 
+              previous= {`Week - ${e.timeframes.monthly.previous}`} 
               image= {images[index]}
-              bgColor= {bgColors[index]}/>
+              bgColor= {bgColors[index]}
+              />
             )
       })
     )
