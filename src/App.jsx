@@ -15,9 +15,7 @@ function App() {
   const [currentlySelected, setCurrentlySelected] = useState("monthly");
   const images = [work, play, study, exercise, social, selfCare]
   const bgColors = ["work", "play", "study", "exercise", "social", "self-care"]
-  const setDaily = () => setCurrentlySelected("daily");
-  const setWeekly = () => setCurrentlySelected("weekly");
-  const setMonthly = () => setCurrentlySelected("monthly");
+  const setDaily = () => setCurrentlySelected("daily"), setWeekly = () => setCurrentlySelected("weekly") ,  setMonthly = () => setCurrentlySelected("monthly")
   return (
     <>
       <div className='container'>
