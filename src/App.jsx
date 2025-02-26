@@ -45,7 +45,7 @@ function App() {
               key={index} 
               title={e.title} 
               current= {e.timeframes.weekly.current} 
-              previous= {`Week - ${e.timeframes.monthly.previous}`} 
+              previous= {`Week - ${e.timeframes.weekly.previous}`} 
               image= {images[index]}
               bgColor= {bgColors[index]}
               />

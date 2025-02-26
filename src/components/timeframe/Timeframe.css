@@ -78,6 +78,7 @@
     gap: 10px;
     .timeframe-current {
         font-size: 3em ;
+        font-weight: lighter;
     }
     .timeframe-previous {
         font-size: 15px;

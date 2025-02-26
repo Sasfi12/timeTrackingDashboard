@@ -10,9 +10,9 @@ export default function User({daily , weekly , monthly}) {
                     <h1>Robson</h1>
                 </div>
                 <div className="choices">
-                    <p onClick={daily}  >daily</p>
-                    <p onClick={weekly} >weekly</p>
-                    <p onClick={monthly}>monthly</p>
+                    <div className="choice-container"><p className="choice" onClick={daily}  >Daily</p>  </div>
+                    <div className="choice-container"><p className="choice" onClick={weekly} >Weekly</p>  </div>
+                    <div className="choice-container"><p className="choice" onClick={monthly}>Monthly</p>  </div>
                 </div>
         </div>
     )
