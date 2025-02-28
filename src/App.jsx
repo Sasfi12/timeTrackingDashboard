@@ -15,13 +15,13 @@ function App() {
   const [currentlySelected, setCurrentlySelected] = useState("monthly");
   const images = [work, play, study, exercise, social, selfCare]
   const bgColors = ["work", "play", "study", "exercise", "social", "self-care"]
-  const setDaily = () => setCurrentlySelected("daily"), setWeekly = () => setCurrentlySelected("weekly") ,  setMonthly = () => setCurrentlySelected("monthly")
+  const setCurrent = (choice) => {
+    setCurrentlySelected(choice)
+  }
   return (
     <>
       <div className='container'>
-        <User daily={setDaily}
-          weekly={setWeekly}
-          monthly={setMonthly} />
+        <User newTimeframe = {setCurrent} />
         <div className='cards-container'>
           { data.map(function (e, index) {
           return (

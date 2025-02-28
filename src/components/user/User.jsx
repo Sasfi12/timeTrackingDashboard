@@ -1,6 +1,6 @@
 import "./User.css"
 import jeremy from "../../assets/images/image-jeremy.png"
-export default function User({daily , weekly , monthly}) {
+export default function User({newTimeframe}) {
     return ( 
         <div className="user-card">   
                 <div className="user-info">
@@ -10,9 +10,9 @@ export default function User({daily , weekly , monthly}) {
                     <h1>Robson</h1>
                 </div>
                 <div className="choices">
-                    <div className="choice-container"><p className="choice" onClick={daily}  >Daily</p>  </div>
-                    <div className="choice-container"><p className="choice" onClick={weekly} >Weekly</p>  </div>
-                    <div className="choice-container"><p className="choice" onClick={monthly}>Monthly</p>  </div>
+                    <div className="choice-container"><p className="choice" onClick={() => newTimeframe("daily")}  >Daily</p>  </div>
+                    <div className="choice-container"><p className="choice" onClick={() => newTimeframe("weekly")} >Weekly</p>  </div>
+                    <div className="choice-container"><p className="choice" onClick={() => newTimeframe("monthly")}>Monthly</p>  </div>
                 </div>
         </div>
     )
