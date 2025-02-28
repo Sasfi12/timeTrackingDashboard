@@ -12,7 +12,7 @@ import work from "./assets/images/icon-work.svg"
 
 
 function App() {
-  const [currentlySelected, setCurrentlySelected] = useState("monthly");
+  const [currentlySelected, setCurrentlySelected] = useState("weekly");
   const images = [work, play, study, exercise, social, selfCare]
   const bgColors = ["work", "play", "study", "exercise", "social", "self-care"]
   const setCurrent = (choice) => {
@@ -29,7 +29,17 @@ function App() {
               key={index}
               title={e.title}
               current={e.timeframes[currentlySelected].current}
-              previous={`Day - ${e.timeframes[currentlySelected].previous}`}
+              previous={`${
+                currentlySelected == "daily"? "Day -"
+               : 
+               currentlySelected == "monthly" ? "Month -" 
+               : 
+               currentlySelected == "weekly" ? "Week -" 
+               : 
+               null
+              }
+              
+              ${e.timeframes[currentlySelected].previous}`}
               image={images[index]}
               bgColor={bgColors[index]}
             />
